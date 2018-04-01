@@ -1,0 +1,24 @@
+build:
+  # https://scrutinizer-ci.com/docs/build/multiple_test_environment
+  nodes:
+    python:
+      environment:
+        # https://scrutinizer-ci.com/docs/guides/python/continuous-integration-deployment#python-version
+        python: '3.6.3'
+      dependencies:
+        # https://scrutinizer-ci.com/docs/guides/python/continuous-integration-deployment#dependencies
+        before:
+          - pip install yamllint
+      tests:
+        override:
+          - yamllint PaletteMira.yaml
+    node:
+      environment:
+        node: '9.9.0'
+      dependencies:
+        before:
+          - npm install yamljs
+      deployment:
+        branch: SashaDevelop
+        commands:
+          - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile
