@@ -11,7 +11,7 @@ build:
           - pip install yamllint
       tests:
         override:
-          - yamllint PaletteMira.yaml
+          - yamllint -s PaletteMira.yaml
     node:
       environment:
         node: '9.9.0'
