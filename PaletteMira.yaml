@@ -1094,10 +1094,11 @@ user_commands:
     context:
       -
         key: "auto_complete_visible"
-  sasha_selection_fields:
+  sashas_selection_fields:
     caption: "MultiEditUtils: Selection fields"
     keys:
       - "alt+super+q"
     call: "sublime.selection_fields"
+    # Sasha comment
     args:
       mode: "smart"
