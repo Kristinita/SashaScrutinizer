@@ -19,6 +19,8 @@ build:
         before:
           - npm install yamljs
       deployment:
-        branch: SashaDevelop
+        branch:
+          -
+            SashaDevelop
         commands:
           - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile
