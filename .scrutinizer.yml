@@ -11,6 +11,8 @@ build:
           - pip install yamllint
       tests:
         override:
+          # Strict mode: build failed, if any warning:
+          # https://yamllint.readthedocs.io/en/stable/configuration.html#errors-and-warnings
           - yamllint -s PaletteMira.yaml
     node:
       environment:
@@ -23,3 +25,4 @@ build:
           branch: SashaDevelop
           commands:
             - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile
+            - git push origin SashaDevelop
