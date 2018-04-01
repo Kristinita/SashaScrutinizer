@@ -27,5 +27,6 @@ build:
             - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile
             - git config --global user.email "SashaChernykhEmpressOfUniverse@kristinita.ru"
             - git config --global user.name "Kristinita"
+            - git add .
             - git commit -m "Scrutinizer commit"
             - git push origin SashaDevelop
