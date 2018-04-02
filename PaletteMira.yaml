@@ -1,4 +1,3 @@
----
 user_commands:
   git-bash:
     caption: "Bash"
@@ -1094,7 +1093,7 @@ user_commands:
     context:
       -
         key: "auto_complete_visible"
-  sashas_selection_fields:
+  sasha_selection_fields:
     caption: "MultiEditUtils: Selection fields"
     keys:
       - "alt+super+q"

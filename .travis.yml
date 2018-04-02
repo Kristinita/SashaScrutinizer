@@ -1,6 +1,10 @@
 git:
   depth: 1
 
+branches:
+  only:
+  - SashaYAML
+
 # Trusty by default:
 # https://stackoverflow.com/a/21133609/5951529
 # https://blog.travis-ci.com/2017-07-11-trusty-as-default-linux-is-coming
@@ -39,12 +43,12 @@ script:
 deploy:
   provider: pages
   on:
-    branch: SashaDevelop
+    branch: SashaJSON
   keep-history: true
   # Don't clean output folder:
   # https://docs.travis-ci.com/user/deployment/pages/
   skip-cleanup: true
-  target-branch: SashaDevelop
+  target-branch: SashaYAML
   repo: Kristinita/SashaScrutinizer
   # “GITHUB_API_KEY” is secure variable, that set in repository settings:
   # https://docs.travis-ci.com/user/environment-variables#Defining-Variables-in-Repository-Settings
