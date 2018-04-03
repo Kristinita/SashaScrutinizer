@@ -1,5 +1,6 @@
 """Prettify YAML.
 
+Using ruamel.yaml:
 https://stackoverflow.com/a/49609535/5951529
 """
 import ruamel.yaml
