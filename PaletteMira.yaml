@@ -52,7 +52,7 @@ user_commands:
     caption: "FileCommands: Quit"
   sasha_filefinder:
     ##############
-    # Filefinder #
+    # FileFinder #
     ##############
     # https://packagecontrol.io/packages/FileFinder
     call: "sublime.filefinder"
@@ -68,6 +68,7 @@ user_commands:
     ###################
     # RegexExplainTip #
     ###################
+    # https://packagecontrol.io/packages/RegexExplainTip
     call: "sublime.regexexplaintip"
     caption: "RegexExplainTip"
   sasha_rem_px_pxtorem:
