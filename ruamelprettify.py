@@ -32,7 +32,10 @@ def block_style(base):
 
 
 yaml = ruamel.yaml.YAML()
-yaml.preserve_quotes = True
+# Save quotes only in cases, when they are needed:
+# https://stackoverflow.com/a/22235064/5951529
+# https://stackoverflow.com/a/49609535/5951529
+yaml.preserve_quotes = False
 file_in = sys.argv[1]
 file_out = sys.argv[2]
 with open(file_in) as fp:

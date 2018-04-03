@@ -16,14 +16,17 @@ python: 3.6
 install:
   - sudo apt-get install parallel
   - pip install -U pip
+  - npm install --global npm
   - bash travis-install.sh
 
 script:
+
+  - travis lint .travis.yml
   - flake8 .
   - pydocstyle
   - yamllint -s PaletteMira.yaml
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
-  # -p — prettify indented JSON:
+  # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
 
 deploy:
