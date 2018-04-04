@@ -20,6 +20,7 @@ install:
 
 script:
 
+  - travis lint .travis.yml
   - flake8 .
   - pydocstyle
   - yamllint -s PaletteMira.yaml
