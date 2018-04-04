@@ -1,5 +1,6 @@
 """Prettify YAML.
 
+Remove [brackets], {braces} and "quotes".
 Using ruamel.yaml:
 https://stackoverflow.com/a/49609535/5951529
 """
