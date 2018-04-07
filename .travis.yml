@@ -27,15 +27,14 @@ install:
 script:
 
   - flake8 .
-  - pydocstyle
   - yamllint -s PaletteMira.yaml
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
   - ag --help
   - ag --version
-  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
-  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
 
 deploy:
   provider: pages
