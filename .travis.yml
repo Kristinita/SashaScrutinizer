@@ -17,6 +17,7 @@ install:
   - sudo apt-get install parallel
   - pip install -U pip
   - bash travis-install.sh
+  - git clone https://github.com/ggreer/the_silver_searcher --depth=1
   - sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
   - bash ./build.sh
   - sudo make install
