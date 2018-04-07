@@ -26,6 +26,7 @@ install:
 
 before_script:
   - mkdir PaletteMiraPackages
+  - mv ruamelprettify.py.palettemira ruamelprettify.py
 
 script:
 
@@ -41,6 +42,7 @@ script:
 after_success:
   # https://www.computerhope.com/issues/ch000798.htm
   - rm -rf the_silver_searcher
+  - mv ruamelprettify.py ruamelprettify.py.palettemira
 
 deploy:
   provider: pages
