@@ -25,7 +25,7 @@ install:
   - cd $TRAVIS_BUILD_DIR
 
 before_script:
-  - sudo chmod -r +x .
+  - sudo chmod +x -r .
 
 script:
 
