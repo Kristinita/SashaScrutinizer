@@ -1,48 +1,11 @@
-DEBUG: Found user's home dir: /home/travis
-DEBUG: Skipping ignore file /home/travis/.agignore
-DEBUG: Skipping ignore file 
-DEBUG: Query is (?<=# )(.+?)(?= #)
-DEBUG: PCRE Version: 8.31 2012-07-06
-DEBUG: Using 2 workers
-DEBUG: searching path PaletteMira.yaml for (?<=# )(.+?)(?= #)
-DEBUG: Skipping ignore file PaletteMira.yaml/.agignore
-DEBUG: Skipping ignore file PaletteMira.yaml/.gitignore
-DEBUG: Skipping ignore file PaletteMira.yaml/.git/info/exclude
-DEBUG: Skipping ignore file PaletteMira.yaml/.hgignore
-DEBUG: Skipping svn ignore file PaletteMira.yaml/.svn/dir-prop-base
-DEBUG: Regex match found. File PaletteMira.yaml, offset 326 bytes.
-DEBUG: Too many matches in PaletteMira.yaml. Reallocating matches to 100.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 556 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 741 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 1070 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 1263 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 1913 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 2099 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 2297 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 2504 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 2769 bytes.
-DEBUG: Regex match found. File PaletteMira.yaml, offset 2953 bytes.
-DEBUG: printing line number
-9:    # AgentRansack #
-DEBUG: printing line number
-16:    # Alignment #
-DEBUG: printing line number
-23:    # Anaconda #
-DEBUG: printing line number
-33:    # Can I Use #
-DEBUG: printing line number
-40:    # FileCommands #
-DEBUG: printing line number
-58:    # FileFinder #
-DEBUG: printing line number
-65:    # Open Include #
-DEBUG: printing line number
-72:    # RegexExplainTip #
-DEBUG: printing line number
-79:    # REM-PX #
-DEBUG: printing line number
-89:    # Unicode View #
-DEBUG: printing line number
-96:    # WebFont #
-DEBUG: Worker finished.
-DEBUG: Worker finished.
+AgentRansack
+Alignment
+Anaconda
+Can I Use
+FileCommands
+FileFinder
+Open Include
+RegexExplainTip
+REM-PX
+Unicode View
+WebFont

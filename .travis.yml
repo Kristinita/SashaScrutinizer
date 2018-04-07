@@ -17,19 +17,24 @@ install:
   - sudo apt-get install parallel
   - pip install -U pip
   - bash travis-install.sh
+  - git clone https://github.com/ggreer/the_silver_searcher --depth=1
+  - cd the_silver_searcher
+  - sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+  - bash ./build.sh
+  - sudo make install
+  - cd $TRAVIS_BUILD_DIR
 
 script:
 
   - flake8 .
-  - pydocstyle
   - yamllint -s PaletteMira.yaml
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
   - ag --help
   - ag --version
-  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
-  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
 
 deploy:
   provider: pages

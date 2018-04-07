@@ -1,21 +1,2 @@
-DEBUG: Found user's home dir: /home/travis
-DEBUG: Skipping ignore file /home/travis/.agignore
-DEBUG: Skipping ignore file 
-DEBUG: Query is (?<=# )(.+?)(?= #)
-DEBUG: PCRE Version: 8.31 2012-07-06
-DEBUG: Using 2 workers
-DEBUG: searching path PaletteMiraDeprecated.yaml for (?<=# )(.+?)(?= #)
-DEBUG: Skipping ignore file PaletteMiraDeprecated.yaml/.agignore
-DEBUG: Skipping ignore file PaletteMiraDeprecated.yaml/.gitignore
-DEBUG: Skipping ignore file PaletteMiraDeprecated.yaml/.git/info/exclude
-DEBUG: Skipping ignore file PaletteMiraDeprecated.yaml/.hgignore
-DEBUG: Skipping svn ignore file PaletteMiraDeprecated.yaml/.svn/dir-prop-base
-DEBUG: Regex match found. File PaletteMiraDeprecated.yaml, offset 218 bytes.
-DEBUG: Too many matches in PaletteMiraDeprecated.yaml. Reallocating matches to 100.
-DEBUG: Regex match found. File PaletteMiraDeprecated.yaml, offset 600 bytes.
-DEBUG: printing line number
-6:    # Copy to HipChat #
-DEBUG: printing line number
-16:    # Travis YML Lint #
-DEBUG: Worker finished.
-DEBUG: Worker finished.
+Copy to HipChat
+Travis YML Lint
