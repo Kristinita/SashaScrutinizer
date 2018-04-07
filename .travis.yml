@@ -26,8 +26,9 @@ script:
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
-  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
-  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
+  - ag --help
+  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
+  - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
 
 deploy:
   provider: pages
