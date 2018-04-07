@@ -17,6 +17,9 @@ install:
   - sudo apt-get install parallel
   - pip install -U pip
   - bash travis-install.sh
+  - sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+  - ./build.sh
+  - sudo make install
 
 script:
 
