@@ -31,10 +31,11 @@ script:
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
-  - ag --help
-  - ag --version
-  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
-  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
+
+after_success:
+  - rm -rf the_silver_searcher
 
 deploy:
   provider: pages
