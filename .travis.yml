@@ -24,6 +24,9 @@ install:
   - sudo make install
   - cd $TRAVIS_BUILD_DIR
 
+before_script:
+  - chmod +x PaletteMiraPackages
+
 script:
 
   - flake8 .
@@ -35,6 +38,7 @@ script:
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
 
 after_success:
+  # https://www.computerhope.com/issues/ch000798.htm
   - rm -rf the_silver_searcher
 
 deploy:
