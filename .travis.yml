@@ -20,13 +20,14 @@ install:
 
 script:
 
-  - travis lint .travis.yml
   - flake8 .
   - pydocstyle
   - yamllint -s PaletteMira.yaml
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
+  - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
 
 deploy:
   provider: pages
@@ -34,8 +35,8 @@ deploy:
     branch: SashaYAML
   keep-history: true
   skip-cleanup: true
-  target-branch: SashaJSON
-  repo: Kristinita/SashaScrutinizer
+  target-branch: SashaDevelop
+  repo: Kristinita/PaletteMira
   github-token: $GITHUB_TOKEN
   committer-from-gh: true
   project-name: PaletteMira
