@@ -27,6 +27,7 @@ script:
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
   - ag --help
+  - ag --version
   - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMira.yaml > active.txt'
   - 'ag -D "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > deprecated.txt'
 
@@ -37,7 +38,7 @@ deploy:
   keep-history: true
   skip-cleanup: true
   target-branch: SashaDevelop
-  repo: Kristinita/PaletteMira
+  repo: Kristinita/SashaScrutinizer
   github-token: $GITHUB_TOKEN
   committer-from-gh: true
   project-name: PaletteMira
