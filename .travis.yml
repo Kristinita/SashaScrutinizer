@@ -24,17 +24,22 @@ install:
   - sudo make install
   - cd $TRAVIS_BUILD_DIR
 
+before_script:
+  - mkdir PaletteMiraPackages
+
 script:
 
   - flake8 .
   - yamllint -s PaletteMira.yaml
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
+  - sort_yaml < PaletteMira.yaml > PaletteMira2.yaml && mv PaletteMira2.yaml PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
 
 after_success:
+  # https://www.computerhope.com/issues/ch000798.htm
   - rm -rf the_silver_searcher
 
 deploy:
