@@ -4,6 +4,13 @@ description: Commands Of PaletteMira Package
 # Description:
 # https://raw.githubusercontent.com/nsubiron/SublimeSuricate/master/profiles/Default.suricate-profile
 user_commands:
+  sasha_can_i_use:
+    #############
+    # Can I Use #
+    #############
+    # https://packagecontrol.io/packages/Can%20I%20Use
+    call: sublime.use_it
+    caption: Can I Use
   sasha_agent_ransack:
     ################
     # AgentRansack #
@@ -28,13 +35,6 @@ user_commands:
   sasha_anaconda_rename:
     call: sublime.anaconda_rename
     caption: 'Anaconda: Rename Object Under Cursor'
-  sasha_can_i_use:
-    #############
-    # Can I Use #
-    #############
-    # https://packagecontrol.io/packages/Can%20I%20Use
-    call: sublime.use_it
-    caption: Can I Use
   sasha_filecommands_force_quit:
     ################
     # FileCommands #
