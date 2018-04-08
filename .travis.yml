@@ -42,12 +42,12 @@ script:
   # https://github.com/packagecontrol/st_package_reviewer/wiki/Package-checks#cache-file-are-redundant-and-created-by-st-automatically
   # https://askubuntu.com/a/377442/582218
   - find . -name "*.cache" -type f -delete
-  - st_package_reviewer -w .
 
 after_success:
   # https://www.computerhope.com/issues/ch000798.htm
   - rm -rf the_silver_searcher
   - mv ruamelprettify.py ruamelprettify.py.palettemira
+  - st_package_reviewer -w .
 
 deploy:
   provider: pages
