@@ -27,6 +27,10 @@ install:
 before_script:
   - mkdir PaletteMiraPackages
   - mv ruamelprettify.py.palettemira ruamelprettify.py
+  # Remove all “.cache” files, that st_package_reviewer don't fail:
+  # https://github.com/packagecontrol/st_package_reviewer/wiki/Package-checks#cache-file-are-redundant-and-created-by-st-automatically
+  # https://askubuntu.com/a/377442/582218
+  - find . -name "*.cache" -type f -delete
 
 script:
 
