@@ -38,6 +38,7 @@ script:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
+  - st_packages_reviewer -w .
 
 after_success:
   # https://www.computerhope.com/issues/ch000798.htm
