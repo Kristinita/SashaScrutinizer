@@ -1,7 +1,7 @@
 # @Author: SashaChernykh
 # @Date:   2018-04-04 20:18:44
 # @Last Modified by:   Kristinita
-# @Last Modified time: 2018-04-08 16:14:40
+# @Last Modified time: 2018-04-08 16:22:05
 parallel ::: 'pip install yamllint' \
              'pip install ruamel.yaml' \
              'npm install -g yamljs' \
@@ -9,4 +9,4 @@ parallel ::: 'pip install yamllint' \
              'pip install pydocstyle' \
              'gem install i18n_yaml_sorter' \
              'pip install st-package-reviewer' \
-             'npm install -g jsonlint'
+             'npm install -g jsonlint-cli'
