@@ -1,8 +1,8 @@
 # [NOTE] Need place comments after key, not before:
 # https://stackoverflow.com/q/49613901/5951529
-description: Commands Of PaletteMira Package
 # Description:
 # https://raw.githubusercontent.com/nsubiron/SublimeSuricate/master/profiles/Default.suricate-profile
+description: Commands Of PaletteMira Package
 user_commands:
   sasha_agent_ransack:
     ################
