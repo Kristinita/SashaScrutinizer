@@ -19,7 +19,6 @@ install:
   - bash install/travis-install.sh
   # Move to build directory after HTML Tidy installation:
   # https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
-  - cd $TRAVIS_BUILD_DIR
 
 before_script:
   - mkdir PaletteMiraPackages
@@ -47,7 +46,7 @@ script:
 
 after_success:
   # https://www.computerhope.com/issues/ch000798.htm
-  - rm -rf install/the_silver_searcher
+  - rm -rf the_silver_searcher
   - mv ruamelprettify.py ruamelprettify.py.palettemira
 
 
