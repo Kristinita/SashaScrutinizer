@@ -1,7 +1,7 @@
 # @Author: SashaChernykh
 # @Date:   2018-04-04 20:18:44
 # @Last Modified by:   Kristinita
-# @Last Modified time: 2018-04-08 16:59:36
+# @Last Modified time: 2018-04-08 17:02:09
 parallel ::: 'pip install yamllint' \
              # 'pip install ruamel.yaml' \
              # 'npm install -g yamljs' \
@@ -10,4 +10,4 @@ parallel ::: 'pip install yamllint' \
              # 'gem install i18n_yaml_sorter' \
              # 'pip install st-package-reviewer' \
              # 'npm install -g jsonlint-cli' \
-             'bash install/the-silver-searcher-build.sh'
+             'bash $TRAVIS_BUILD_DIR/install/the-silver-searcher-build.sh'
