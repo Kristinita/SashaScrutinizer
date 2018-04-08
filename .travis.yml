@@ -30,6 +30,7 @@ before_script:
 
 script:
 
+  - jsonlint -q SashaJsonlint.json
   - flake8 .
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   - sort_yaml < PaletteMira.yaml > PaletteMira2.yaml && mv PaletteMira2.yaml PaletteMira.yaml
