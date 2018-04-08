@@ -16,12 +16,9 @@ python: 3.6
 install:
   - sudo apt-get install parallel
   - pip install -U pip
-  - bash travis-install.sh
-  - git clone https://github.com/ggreer/the_silver_searcher --depth=1
-  - cd the_silver_searcher
-  - sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
-  - bash ./build.sh
-  - sudo make install
+  - bash install/travis-install.sh
+  # Move to build directory after HTML Tidy installation:
+  # https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables
   - cd $TRAVIS_BUILD_DIR
 
 before_script:
@@ -31,11 +28,14 @@ before_script:
 script:
 
   - flake8 .
+  - pydocstyle ruamelprettify.py
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   - sort_yaml < PaletteMira.yaml > PaletteMira2.yaml && mv PaletteMira2.yaml PaletteMira.yaml
   - yamllint -s PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
+  # “jsonlint-cli” — check JSON:
+  # https://www.npmjs.com/package/jsonlint-cli
   - jsonlint-cli PaletteMira.suricate-profile
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
@@ -47,7 +47,7 @@ script:
 
 after_success:
   # https://www.computerhope.com/issues/ch000798.htm
-  - rm -rf the_silver_searcher
+  - rm -rf install/the_silver_searcher
   - mv ruamelprettify.py ruamelprettify.py.palettemira
 
 
