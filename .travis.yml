@@ -30,13 +30,13 @@ before_script:
 
 script:
 
-  - jsonlint -q SashaJsonlint.json
   - flake8 .
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
   - sort_yaml < PaletteMira.yaml > PaletteMira2.yaml && mv PaletteMira2.yaml PaletteMira.yaml
   - yamllint -s PaletteMira.yaml
   # “-p” — prettify indented JSON:
   - yaml2json PaletteMira.yaml > PaletteMira.suricate-profile -p
+  - jsonlint -q PaletteMira.suricate-profile
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMira.yaml > PaletteMiraPackages/active.txt'
   - 'ag -o "(?<=# )(.+?)(?= #)" PaletteMiraDeprecated.yaml > PaletteMiraPackages/deprecated.txt'
   # Remove all “.cache” files from the_silver_searcher, that st_package_reviewer don't fail:
