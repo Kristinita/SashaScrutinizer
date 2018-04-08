@@ -26,6 +26,7 @@ before_script:
 
 script:
 
+  - travis lint -x
   - flake8 .
   - pydocstyle ruamelprettify.py
   - python ruamelprettify.py PaletteMira.yaml PaletteMira.yaml
