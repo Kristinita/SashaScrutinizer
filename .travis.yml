@@ -1,3 +1,8 @@
+addons:
+  apt:
+    packages:
+      - parallel
+
 # See configuration comments in “.travis.yml file of KristinitaPelican”:
 # https://github.com/Kristinita/KristinitaPelican/blob/master/.travis.yml
 git:
@@ -9,12 +14,9 @@ branches:
   only:
   - SashaYAML
 
-language: python
-
-python: 3.6
+language: bash
 
 install:
-- sudo apt-get install parallel
 - pip install -U pip
 - bash misc/travis-install.sh
 # Move to build directory after HTML Tidy installation:
@@ -82,7 +84,7 @@ script:
 - st_package_reviewer -w .
 # XMLStarlet — XML validator:
 # http://xmlstar.sourceforge.net/docs.php
-- xml val misc/PaletteMiraHashesAroundSelectedWords.sane.sublime-snippet
+- xmlstarlet val misc/PaletteMiraHashesAroundSelectedWords.sane.sublime-snippet
 
 after_success:
 # https://www.computerhope.com/issues/ch000798.htm

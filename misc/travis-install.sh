@@ -1,7 +1,7 @@
 # @Author: SashaChernykh
 # @Date:   2018-04-04 20:18:44
 # @Last Modified by:   Kristinita
-# @Last Modified time: 2018-04-23 14:58:21
+# @Last Modified time: 2018-04-23 17:12:52
 parallel ::: 'pip install yamllint' \
 	'pip install ruamel.yaml' \
 	'npm install -g yamljs' \
@@ -14,4 +14,3 @@ parallel ::: 'pip install yamllint' \
 	'gem install travis' \
 	'npm install -g @commitlint/travis-cli' \
 	'npm install -g eclint' \
-	'sudo apt-get install xmlstarlet'
