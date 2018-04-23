@@ -1,11 +1,18 @@
+# See configuration comments in “.travis.yml file of KristinitaPelican”:
+# https://github.com/Kristinita/KristinitaPelican/blob/master/.travis.yml
 sudo: required
 addons:
   apt:
     packages:
-      - parallel
+    # All packages besides Parallel — the_silver_searcher building:
+    # https://github.com/ggreer/the_silver_searcher#building-from-source
+    - automake
+    - liblzma-dev
+    - libpcre3-dev
+    - pkg-config
+    - zlib1g-dev
+    - parallel
 
-# See configuration comments in “.travis.yml file of KristinitaPelican”:
-# https://github.com/Kristinita/KristinitaPelican/blob/master/.travis.yml
 git:
   depth: 1
 
