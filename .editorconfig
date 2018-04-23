@@ -35,7 +35,7 @@ indent_size = 2
 
 # Read reasons in “.flake8” file:
 # https://github.com/Kristinita/KristinitaPelican/blob/master/.flake8
-[*.{py, palettemira}]
+[*.{py,palettemira}]
 indent_style = space
 
 # Windows line endings in batch file.
