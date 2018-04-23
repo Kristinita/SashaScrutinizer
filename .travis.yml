@@ -16,6 +16,8 @@ branches:
 
 language: bash
 
+python: 3.6
+
 install:
 - pip install -U pip
 - bash misc/travis-install.sh
