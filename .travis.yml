@@ -80,7 +80,8 @@ script:
 # https://pypi.org/project/st-package-reviewer/
 # https://github.com/packagecontrol/st_package_reviewer/wiki
 - st_package_reviewer -w .
-# XMLStarlet
+# XMLStarlet — XML validator:
+# http://xmlstar.sourceforge.net/docs.php
 - xml val misc/PaletteMiraHashesAroundSelectedWords.sane.sublime-snippet
 
 after_success:
