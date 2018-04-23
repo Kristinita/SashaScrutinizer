@@ -84,7 +84,7 @@ script:
 - st_package_reviewer -w .
 # XMLStarlet — XML validator:
 # http://xmlstar.sourceforge.net/docs.php
-- xmlstarlet val misc/PaletteMiraHashesAroundSelectedWords.sane.sublime-snippet
+# - xmlstarlet val misc/PaletteMiraHashesAroundSelectedWords.sane.sublime-snippet
 
 after_success:
 # https://www.computerhope.com/issues/ch000798.htm
